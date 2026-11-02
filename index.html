@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Contact Book | Modern Corporate Register</title>
+  <meta name="description" content="Replace your company's physical contact register with an aesthetic, modern digital contact book.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Shifting Glow Mesh -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+    <div class="glow-orb glow-3"></div>
+  </div>
+
+  <!-- Sticky Glass Navigation Bar -->
+  <div class="navbar-wrapper">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 2v4"></path>
+            <path d="M8 2v4"></path>
+            <rect width="18" height="18" x="3" y="4" rx="3"></rect>
+            <circle cx="12" cy="11" r="3"></circle>
+            <path d="M7 18a5 5 0 0 1 10 0"></path>
+          </svg>
+        </div>
+        <span>Digital Contact Book</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="pages/contacts.html" class="nav-link">Contacts</a></li>
+        <li><a href="pages/add-contact.html" class="nav-link">Add Contact</a></li>
+        <li><a href="pages/about.html" class="nav-link">About</a></li>
+      </ul>
+
+      <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="pages/contacts.html" class="nav-link">Contacts</a>
+    <a href="pages/add-contact.html" class="nav-link">Add Contact</a>
+    <a href="pages/about.html" class="nav-link">About</a>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Hero Section -->
+      <section class="hero-section fade-in">
+        <div class="hero-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          Digital Register v1.0
+        </div>
+        <h1 class="hero-title">
+          Modern Company <br><span class="gradient-text">Contact Register</span>
+        </h1>
+        <p class="hero-subtitle">
+          Replace physical binders and scattered notes with a secure, instant digital register. Easily store, search, organize, and reach out to business partners in one sleek interface.
+        </p>
+        <div class="hero-actions">
+          <a href="pages/contacts.html" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            View Contacts
+          </a>
+          <a href="pages/add-contact.html" class="btn btn-glass">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Add Contact
+          </a>
+        </div>
+      </section>
+
+      <!-- Dashboard Highlights & Total Count -->
+      <section class="stats-grid" aria-label="Register Statistics">
+        <div class="glass-panel glass-panel-hover stat-card">
+          <div class="stat-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <circle cx="11" cy="7" r="4"></circle>
+              <line x1="19" y1="8" x2="19" y2="14"></line>
+              <line x1="22" y1="11" x2="16" y2="11"></line>
+            </svg>
+          </div>
+          <div class="stat-meta">
+            <span class="stat-val" id="total-contacts-count">0</span>
+            <span class="stat-desc">Total Active Contacts</span>
+          </div>
+        </div>
+
+        <div class="glass-panel glass-panel-hover stat-card">
+          <div class="stat-icon cyan">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+          <div class="stat-meta">
+            <span class="stat-val">Instant</span>
+            <span class="stat-desc">Live Search & Filter</span>
+          </div>
+        </div>
+
+        <div class="glass-panel glass-panel-hover stat-card">
+          <div class="stat-icon pink">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+          </div>
+          <div class="stat-meta">
+            <span class="stat-val">100%</span>
+            <span class="stat-desc">Duplicate Protected</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Contacts Section -->
+      <section style="margin-top: 40px;">
+        <div class="section-header">
+          <h2 class="section-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-cyan);">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            Recently Added Entries
+            <span class="section-badge">Latest 3</span>
+          </h2>
+          <a href="pages/contacts.html" class="btn btn-sm btn-glass">
+            View All in Directory &rarr;
+          </a>
+        </div>
+
+        <!-- Dynamic Grid of 3 Most Recent Contacts -->
+        <div class="cards-grid" id="recent-contacts-list">
+          <!-- Injected via inline script -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Sticky / Bottom Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>&copy; 2026 Digital Contact Book &bull; Secure Browser Storage</div>
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="pages/contacts.html">Contacts</a>
+        <a href="pages/add-contact.html">Add Contact</a>
+        <a href="pages/about.html">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Stack -->
+  <div class="toast-stack" id="toast-stack"></div>
+
+  <!-- Small Inline Script for Data Handling & Interactivity -->
+  <script>
+    // Storage Database Key
+    const DB_KEY = 'contact_register_db';
+
+    // 5 Realistic Sample Contacts
+    const DEFAULT_CONTACTS = [
+      {
+        id: 'c1',
+        companyName: 'Nexus Cloud Technologies',
+        managerName: 'Sophia Chen',
+        phone: '+1 (555) 234-5678',
+        email: 'sophia.chen@nexuscloud.io',
+        dateAdded: '2026-10-15T09:30:00.000Z'
+      },
+      {
+        id: 'c2',
+        companyName: 'Apex Innovations Corp',
+        managerName: 'Marcus Vance',
+        phone: '+1 (555) 389-1240',
+        email: 'm.vance@apexinnovate.com',
+        dateAdded: '2026-10-18T14:15:00.000Z'
+      },
+      {
+        id: 'c3',
+        companyName: 'Horizon Media Group',
+        managerName: 'Elena Rostova',
+        phone: '+1 (555) 782-9014',
+        email: 'elena@horizonmedia.org',
+        dateAdded: '2026-10-22T11:45:00.000Z'
+      },
+      {
+        id: 'c4',
+        companyName: 'Vanguard Cybersec Labs',
+        managerName: 'David K. Miller',
+        phone: '+1 (555) 412-8833',
+        email: 'd.miller@vanguardcyber.net',
+        dateAdded: '2026-10-27T16:20:00.000Z'
+      },
+      {
+        id: 'c5',
+        companyName: 'Solaria Energy Systems',
+        managerName: 'Amara Patel',
+        phone: '+1 (555) 961-3420',
+        email: 'amara.patel@solariaenergy.tech',
+        dateAdded: '2026-10-30T08:10:00.000Z'
+      }
+    ];
+
+    // Helper: Retrieve Contacts or Seed Default
+    function getStoredContacts() {
+      try {
+        const raw = localStorage.getItem(DB_KEY);
+        if (raw === null) {
+          localStorage.setItem(DB_KEY, JSON.stringify(DEFAULT_CONTACTS));
+          return [...DEFAULT_CONTACTS];
+        }
+        return JSON.parse(raw) || [];
+      } catch (err) {
+        console.error('Storage access error', err);
+        return [];
+      }
+    }
+
+    // Helper: Generate Initials
+    function getInitials(name) {
+      if (!name) return 'CB';
+      const parts = name.trim().split(/\s+/);
+      if (parts.length >= 2) {
+        return (parts[0][0] + parts[1][0]).toUpperCase();
+      }
+      return name.slice(0, 2).toUpperCase();
+    }
+
+    // Helper: Vibrant Gradient based on Company Name Hash
+    function getAvatarGradient(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+      }
+      const h1 = Math.abs(hash) % 360;
+      const h2 = (h1 + 45) % 360;
+      return `linear-gradient(135deg, hsl(${h1}, 80%, 55%) 0%, hsl(${h2}, 85%, 48%) 100%)`;
+    }
+
+    // Helper: Escape HTML strings
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    // Helper: Copy to Clipboard with Toast Notification
+    function copyText(text, label) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Copied ' + label + ' to clipboard!');
+      }).catch(() => {
+        showToast('Failed to copy text');
+      });
+    }
+
+    // Helper: Show Toast
+    function showToast(msg) {
+      const stack = document.getElementById('toast-stack');
+      if (!stack) return;
+      const item = document.createElement('div');
+      item.className = 'toast-item';
+      item.innerHTML = `
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-cyan);"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+        <span>${escapeHtml(msg)}</span>
+      `;
+      stack.appendChild(item);
+      setTimeout(() => {
+        item.style.animation = 'toastOut 0.3s forwards';
+        setTimeout(() => item.remove(), 300);
+      }, 3000);
+    }
+
+    // Render Home Page Details
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile menu toggle
+      const toggle = document.getElementById('mobile-toggle');
+      const menu = document.getElementById('mobile-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', () => menu.classList.toggle('open'));
+      }
+
+      // Load contacts
+      const contacts = getStoredContacts();
+      const countEl = document.getElementById('total-contacts-count');
+      if (countEl) countEl.textContent = contacts.length;
+
+      // Render top 3 recent contacts
+      const listEl = document.getElementById('recent-contacts-list');
+      if (!listEl) return;
+
+      const recent = [...contacts]
+        .sort((a, b) => new Date(b.dateAdded || 0) - new Date(a.dateAdded || 0))
+        .slice(0, 3);
+
+      if (recent.length === 0) {
+        listEl.innerHTML = `
+          <div class="glass-panel empty-state" style="grid-column: 1 / -1; width: 100%;">
+            <div class="empty-icon-circle">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+            </div>
+            <h3 class="empty-title">Register is Currently Empty</h3>
+            <p class="empty-text">No contacts found in browser storage. Add your first contact to get started.</p>
+            <a href="pages/add-contact.html" class="btn btn-primary">Add First Contact</a>
+          </div>
+        `;
+        return;
+      }
+
+      listEl.innerHTML = recent.map(c => {
+        const initials = getInitials(c.companyName);
+        const grad = getAvatarGradient(c.companyName);
+        const safeCompany = escapeHtml(c.companyName);
+        const safeManager = escapeHtml(c.managerName);
+        const safePhone = escapeHtml(c.phone);
+        const safeEmail = escapeHtml(c.email);
+
+        return `
+          <article class="glass-panel glass-panel-hover contact-card">
+            <div>
+              <div class="card-header-row">
+                <div class="company-avatar-badge" style="background: ${grad};">
+                  ${initials}
+                </div>
+                <div class="card-titles">
+                  <h3 class="card-company-name" title="${safeCompany}">${safeCompany}</h3>
+                  <div class="card-manager-name">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>${safeManager}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-contact-list">
+                <div class="contact-item-row">
+                  <div class="item-left">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <a href="tel:${safePhone}" class="item-link" title="Call">${safePhone}</a>
+                  </div>
+                  <button type="button" class="copy-mini-btn" onclick="copyText('${safePhone}', 'Phone')" title="Copy Phone">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                  </button>
+                </div>
+
+                <div class="contact-item-row">
+                  <div class="item-left">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    <a href="mailto:${safeEmail}" class="item-link" title="Email">${safeEmail}</a>
+                  </div>
+                  <button type="button" class="copy-mini-btn" onclick="copyText('${safeEmail}', 'Email')" title="Copy Email">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-footer-row">
+              <a href="pages/edit-contact.html?id=${c.id}" class="btn btn-sm btn-glass">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                Edit
+              </a>
+            </div>
+          </article>
+        `;
+      }).join('');
+    });
+  </script>
+</body>
+</html>
+
