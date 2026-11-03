@@ -259,6 +259,12 @@ body {
 }
 
 /* Mobile Toggle & Menu */
+.mobile-toggle-check {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .mobile-toggle {
   display: none;
   width: 40px;
@@ -270,6 +276,7 @@ body {
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  user-select: none;
 }
 
 .mobile-menu {
@@ -289,7 +296,8 @@ body {
   gap: 8px;
 }
 
-.mobile-menu.open {
+.mobile-menu.open,
+.mobile-toggle-check:checked ~ .mobile-menu {
   display: flex;
 }
 
@@ -971,9 +979,16 @@ body {
   transition: opacity var(--transition-normal);
 }
 
-.modal-overlay.open {
+.modal-overlay.open,
+.modal-overlay:target {
   opacity: 1;
   pointer-events: auto;
+}
+
+.modal-backdrop-close {
+  position: absolute;
+  inset: 0;
+  cursor: default;
 }
 
 .modal-card {
@@ -988,9 +1003,12 @@ body {
   text-align: center;
   transform: scale(0.92);
   transition: transform var(--transition-bounce);
+  position: relative;
+  z-index: 1;
 }
 
-.modal-overlay.open .modal-card {
+.modal-overlay.open .modal-card,
+.modal-overlay:target .modal-card {
   transform: scale(1);
 }
 

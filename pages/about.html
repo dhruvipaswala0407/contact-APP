@@ -16,6 +16,9 @@
     <div class="glow-orb glow-3"></div>
   </div>
 
+  <!-- Pure CSS Mobile Menu Toggle Checkbox -->
+  <input type="checkbox" id="mobile-toggle-check" class="mobile-toggle-check" aria-hidden="true">
+
   <!-- Sticky Glass Navigation Bar -->
   <div class="navbar-wrapper">
     <nav class="navbar" aria-label="Main Navigation">
@@ -39,13 +42,13 @@
         <li><a href="about.html" class="nav-link active">About</a></li>
       </ul>
 
-      <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+      <label for="mobile-toggle-check" class="mobile-toggle" aria-label="Toggle Navigation Menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="4" y1="6" x2="20" y2="6"></line>
           <line x1="4" y1="12" x2="20" y2="12"></line>
           <line x1="4" y1="18" x2="20" y2="18"></line>
         </svg>
-      </button>
+      </label>
     </nav>
   </div>
 
@@ -103,22 +106,22 @@
               <tr>
                 <td><strong>Search Speed</strong></td>
                 <td>Slow; flipping through pages manually</td>
-                <td><span style="color: var(--accent-emerald); font-weight: 600;">Instant</span>; filters as you type</td>
+                <td><span style="color: var(--accent-emerald); font-weight: 600;">Instant</span>; fast browsing &amp; clean layout</td>
               </tr>
               <tr>
                 <td><strong>Calling & Emailing</strong></td>
                 <td>Manual dial from paper notes</td>
-                <td><span style="color: var(--accent-emerald); font-weight: 600;">One-click</span> click-to-call & click-to-email</td>
+                <td><span style="color: var(--accent-emerald); font-weight: 600;">One-click</span> native click-to-call &amp; click-to-email</td>
               </tr>
               <tr>
-                <td><strong>Duplicate Prevention</strong></td>
-                <td>None; duplicate entries often go unnoticed</td>
-                <td><span style="color: var(--accent-emerald); font-weight: 600;">Automatic</span>; live warnings for repeated emails/names</td>
+                <td><strong>Form Validation</strong></td>
+                <td>None; duplicate entries and typos often go unnoticed</td>
+                <td><span style="color: var(--accent-emerald); font-weight: 600;">Native HTML5</span> validation for emails and numbers</td>
               </tr>
               <tr>
-                <td><strong>Backup & Security</strong></td>
-                <td>Fragile; vulnerable to loss, water, or damage</td>
-                <td><span style="color: var(--accent-emerald); font-weight: 600;">Safe</span> in browser storage + instant CSV backup</td>
+                <td><strong>Backup & Durability</strong></td>
+                <td>Fragile; vulnerable to loss, water, or physical wear</td>
+                <td><span style="color: var(--accent-emerald); font-weight: 600;">Safe</span> CSV backup file download</td>
               </tr>
               <tr>
                 <td><strong>Editing Records</strong></td>
@@ -146,16 +149,16 @@
             <div class="guide-step-num">1</div>
             <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 8px;">Adding New Contacts</h3>
             <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-              Click on <strong>Add Contact</strong> in the navigation bar. Enter the Company Name, Manager Name, Phone Number, and Email Address. Real-time validation checks for proper email syntax and phone lengths.
+              Click on <strong>Add Contact</strong> in the navigation bar. Enter the Company Name, Manager Name, Phone Number, and Email Address. Built-in HTML5 validation ensures correct formatting.
             </p>
           </div>
 
           <!-- Step 2 -->
           <div class="glass-panel glass-panel-hover guide-card">
             <div class="guide-step-num">2</div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 8px;">Instant Live Search</h3>
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 8px;">Unified Directory</h3>
             <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-              Head to the <strong>Contacts</strong> page. Type any keyword into the search bar. The directory filters simultaneously across company names, managers, phone numbers, and emails with zero lag.
+              Head to the <strong>Contacts</strong> page. Browse all registered partners with corporate avatars, manager names, and instant contact channels.
             </p>
           </div>
 
@@ -164,34 +167,34 @@
             <div class="guide-step-num">3</div>
             <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 8px;">Direct Communication</h3>
             <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-              Each contact card features quick-action buttons. Click the phone link to initiate a call, click the email address to compose an email, or hit the copy icon to copy numbers or emails directly to your clipboard.
+              Each contact card features quick-action links. Click the phone number to launch your system dialer, or click the email address to open your default email client.
             </p>
           </div>
 
           <!-- Step 4 -->
           <div class="glass-panel glass-panel-hover guide-card">
             <div class="guide-step-num">4</div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 8px;">Sorting Your Directory</h3>
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 8px;">Aesthetic Glassmorphic UI</h3>
             <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-              Sort entries alphabetically by <strong>Company (A&rarr;Z or Z&rarr;A)</strong>, by <strong>Manager Name</strong>, or order them by <strong>Recently Added</strong> to quickly locate partners added this week.
+              Modern, responsive aurora theme designed with pure CSS. Enjoy fluid responsive layouts, soft ambient lighting, and subtle micro-interactions on any screen.
             </p>
           </div>
 
           <!-- Step 5 -->
           <div class="glass-panel glass-panel-hover guide-card">
             <div class="guide-step-num">5</div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 8px;">Editing & Deleting</h3>
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 8px;">Editing Records</h3>
             <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-              Need to update a manager's phone or email? Click <strong>Edit</strong> on any contact card. When removing an obsolete contact, a stylish confirmation modal ensures accidental clicks never delete records.
+              Need to update a manager's phone or email? Click <strong>Edit</strong> on any contact card to view and revise the company details.
             </p>
           </div>
 
           <!-- Step 6 -->
           <div class="glass-panel glass-panel-hover guide-card">
             <div class="guide-step-num">6</div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 8px;">Data Backup & Privacy</h3>
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 8px;">Data Backup & CSV</h3>
             <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
-              Your business contacts remain safely stored in your browser's private local storage. Click the <strong>Export CSV</strong> button on the Contacts page anytime to download a backup file for your spreadsheets.
+              Click the <strong>Export CSV</strong> button on the Contacts page to immediately download your contact register for spreadsheets or offline archives.
             </p>
           </div>
         </div>
@@ -203,7 +206,7 @@
           Ready to Explore Your Register?
         </h2>
         <p style="color: var(--text-muted); max-width: 560px; margin: 0 auto 24px; font-size: 1rem;">
-          Your digital register comes pre-seeded with 5 verified corporate sample contacts so you can experience instant search and communication immediately.
+          Your digital register features verified corporate contacts with direct communication links.
         </p>
         <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
           <a href="contacts.html" class="btn btn-primary">Open Contacts Directory</a>
@@ -217,7 +220,7 @@
   <!-- Sticky / Bottom Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>&copy; 2026 Digital Contact Book &bull; Secure Browser Storage</div>
+      <div>&copy; 2026 Digital Contact Book &bull; Pure HTML &amp; CSS Edition</div>
       <div class="footer-nav">
         <a href="../index.html">Home</a>
         <a href="contacts.html">Contacts</a>
@@ -227,16 +230,5 @@
     </div>
   </footer>
 
-  <!-- Small Inline Script for Mobile Navigation -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.getElementById('mobile-toggle');
-      const menu = document.getElementById('mobile-menu');
-      if (toggle && menu) {
-        toggle.addEventListener('click', () => menu.classList.toggle('open'));
-      }
-    });
-  </script>
 </body>
 </html>
-
