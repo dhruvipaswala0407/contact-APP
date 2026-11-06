@@ -86,6 +86,9 @@ body {
   position: relative;
   overflow-x: hidden;
 }
+a{
+  text-decoration: none;
+}
 
 /* Shifting Ambient Aurora Mesh */
 .ambient-glow {

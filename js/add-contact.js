@@ -2,6 +2,7 @@ const $ = (id) => document.getElementById(id);
 const formValidation = (companyName,managerName,phoneNumber)=> {
     if (companyName.length <= 2) {
         $('field-company').classList.add('has-error');
+        $('companyName').focus();
         return 0;
     } else {
         $('field-company').classList.remove('has-error');
@@ -9,12 +10,14 @@ const formValidation = (companyName,managerName,phoneNumber)=> {
     }
     if (managerName.length <= 2) {
         $('field-manager').classList.add('has-error');
+        $('managerName').focus();
         return 0;
     } else {
         $('field-manager').classList.remove('has-error');
     }
     if (phoneNumber.length !== 10) {
         $('field-phone').classList.add('has-error');
+        $('phoneNumber').focus();
         return 0;
     } else {
         $('field-phone').classList.remove('has-error');
@@ -32,15 +35,19 @@ const addCardForm = (e) => {
         return;
     }
 const dataObj = {
+    id:Date.now(),
     companyName,
     managerName,
     phoneNumber,
     emailAddress
 }
-
 dataArray.push(dataObj);
 // console.log(dataArray);
 localStorage.setItem('contactDetails', JSON.stringify(dataArray));
+
 $('contact-form').reset();
+
+window.location.href = 'contacts.html';
 };
+
 $('contact-form').addEventListener('submit', addCardForm);
