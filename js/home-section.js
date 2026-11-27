@@ -7,9 +7,10 @@ $('total-contacts-count').innerHTML= contacts.length;
 const renderCards = (allContacts) => {
   $("home-section-badge").innerText = `${allContacts.length} VIP contacts`;
 $("stat-card").innerText = `${allContacts.length}`
-  let htmlContent = "";
 
-  allContacts.forEach((contact) => {
+let htmlContent = "";
+
+  allContacts.slice(0,3).forEach((contact) => {
     const initials = contact.companyName
       ? contact.companyName
           .split(" ")
