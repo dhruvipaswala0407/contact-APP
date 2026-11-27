@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Contact Book | Modern Corporate Register</title>
+  <meta name="description"
+    content="Replace your company's physical contact register with an aesthetic, modern digital contact book.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Ambient Shifting Glow Mesh -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+    <div class="glow-orb glow-3"></div>
+  </div>
+
+  <!-- Pure CSS Mobile Menu Toggle Checkbox -->
+  <input type="checkbox" id="mobile-toggle-check" class="mobile-toggle-check" tabindex="-1">
+
+  <!-- Sticky Glass Navigation Bar -->
+  <div class="navbar-wrapper">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 2v4"></path>
+            <path d="M8 2v4"></path>
+            <rect width="18" height="18" x="3" y="4" rx="3"></rect>
+            <circle cx="12" cy="11" r="3"></circle>
+            <path d="M7 18a5 5 0 0 1 10 0"></path>
+          </svg>
+        </div>
+        <span>Digital Contact Book</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="pages/contacts.html" class="nav-link">Contacts</a></li>
+        <li><a href="pages/favourites.html" class="nav-link">Favorites</a></li>
+        <li><a href="pages/add-contact.html" class="nav-link">Add Contact</a></li>
+        <li><a href="pages/about.html" class="nav-link">About</a></li>
+      </ul>
+
+      <label for="mobile-toggle-check" class="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+      </label>
+    </nav>
+  </div>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="#how-it-works" class="nav-link">How It Works</a>
+    <a href="pages/contacts.html" class="nav-link">Contacts</a>
+    <a href="pages/favourites.html" class="nav-link">Favorites</a>
+    <a href="pages/add-contact.html" class="nav-link">Add Contact</a>
+    <a href="pages/about.html" class="nav-link">About</a>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Hero Section -->
+      <section class="hero-section fade-in">
+        <div class="hero-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          Digital Register v1.0
+        </div>
+        <h1 class="hero-title">
+          Modern Company <br><span class="gradient-text">Contact Register</span>
+        </h1>
+        <p class="hero-subtitle">
+          Replace physical binders and scattered notes with a secure, instant digital register. Easily store, search,
+          organize, and reach out to business partners in one sleek interface.
+        </p>
+        <div class="hero-actions">
+          <a href="pages/contacts.html" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            View Contacts
+          </a>
+          <a href="pages/add-contact.html" class="btn btn-glass">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Add Contact
+          </a>
+        </div>
+      </section>
+
+      <!-- Dashboard Highlights & Total Count -->
+      <section class="stats-grid" aria-label="Register Statistics">
+        <a class="glass-panel glass-panel-hover stat-card" href="./pages/contacts.html">
+          <div class="stat-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <circle cx="11" cy="7" r="4"></circle>
+              <line x1="19" y1="8" x2="19" y2="14"></line>
+              <line x1="22" y1="11" x2="16" y2="11"></line>
+            </svg>
+          </div>
+          <div class="stat-meta">
+            <span class="stat-val" id="total-contacts-count">5</span>
+            <span class="stat-desc">Total Contacts</span>
+          </div>
+        </a>
+
+        <div class="glass-panel glass-panel-hover stat-card">
+          <div class="stat-icon cyan">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+          <div class="stat-meta">
+            <span class="stat-val">Instant</span>
+            <span class="stat-desc">Direct Phone & Email</span>
+          </div>
+        </div>
+
+        <a href="pages/favourites.html"class="glass-panel glass-panel-hover stat-card" style="text-decoration: none; color: inherit;">
+          <div class="stat-icon amber">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <div class="stat-meta" >
+            <span class="stat-val" id="stat-card" >3</span>
+            <span class="stat-desc">VIP Priority Contacts</span>
+          </div>
+        </a>
+      </section>
+
+      <!-- How It Works Section -->
+      <section id="how-it-works" class="how-it-works-section fade-in" aria-label="How It Works">
+        <div class="section-header">
+          <div>
+            <div class="hero-pill" style="margin-bottom: 10px; font-size: 0.75rem; padding: 4px 12px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 14 14"></polyline>
+              </svg>
+              Step-by-Step Workflow
+            </div>
+            <h2 class="section-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-violet);">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+              How It Works
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 4px; max-width: 600px;">
+              Replace cluttered paper registers and disconnected notebooks with a streamlined four-step workflow.
+            </p>
+          </div>
+          <a href="pages/about.html" class="btn btn-sm btn-glass">
+            Full User Guide &rarr;
+          </a>
+        </div>
+
+        <div class="steps-grid">
+
+          <!-- Step 1 -->
+          <div class="glass-panel glass-panel-hover step-card">
+            <div>
+              <div class="step-top-row">
+                <span class="step-number-pill">Step 01</span>
+                <div class="step-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="11" cy="7" r="4"></circle>
+                    <line x1="19" y1="8" x2="19" y2="14"></line>
+                    <line x1="22" y1="11" x2="16" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="step-title">Register Contact</h3>
+              <p class="step-desc">
+                Record new corporate relationships. Add company details, managerial contact names, phone numbers, and
+                emails with built-in validation.
+              </p>
+            </div>
+            <div class="step-footer">
+              <a href="pages/add-contact.html" class="step-link">Add Partner &rarr;</a>
+              <span class="step-tag-pill">HTML5 Form</span>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="glass-panel glass-panel-hover step-card">
+            <div>
+              <div class="step-top-row">
+                <span class="step-number-pill"
+                  style="color: var(--accent-cyan); background: rgba(6, 182, 212, 0.12); border-color: rgba(6, 182, 212, 0.3);">Step
+                  02</span>
+                <div class="step-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                    <path d="M7 8h10"></path>
+                    <path d="M7 12h10"></path>
+                    <path d="M7 16h6"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="step-title">Explore Directory</h3>
+              <p class="step-desc">
+                Browse your corporate register in a clean cards view. View company initials, managers, and organize
+                entries alphabetically or by recent additions.
+              </p>
+            </div>
+            <div class="step-footer">
+              <a href="pages/contacts.html" class="step-link">Open Directory &rarr;</a>
+              <span class="step-tag-pill">Glassmorphic UI</span>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glass-panel glass-panel-hover step-card">
+            <div>
+              <div class="step-top-row">
+                <span class="step-number-pill"
+                  style="color: var(--accent-emerald); background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.3);">Step
+                  03</span>
+                <div class="step-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="step-title">Reach Out Instantly</h3>
+              <p class="step-desc">
+                Connect in one click. Tap phone links to initiate direct telephone calls or click email addresses to
+                draft messages immediately.
+              </p>
+            </div>
+            <div class="step-footer">
+              <a href="pages/contacts.html" class="step-link">Try Calling &rarr;</a>
+              <span class="step-tag-pill">Direct Action</span>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="glass-panel glass-panel-hover step-card">
+            <div>
+              <div class="step-top-row">
+                <span class="step-number-pill"
+                  style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12); border-color: rgba(236, 72, 153, 0.3);">Step
+                  04</span>
+                <div class="step-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="step-title">Backup & Export</h3>
+              <p class="step-desc">
+                Export and safeguard company registers. Download a formatted CSV spreadsheet anytime for Excel, Google
+                Sheets, or team archives.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Recent Contacts Section -->
+      <section style="margin-top: 40px;">
+        <div class="section-header">
+          <h1 class="section-title">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-amber);">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            Favourite Contacts
+            <span class="section-badge" id="home-section-badge" style="background: rgba(245, 158, 11, 0.14); color: #fbbf24; border-color: rgba(245, 158, 11, 0.35);">
+              <!-- count contact  -->
+            </span>
+          </h1>
+          <a href="pages/favourites.html" class="btn btn-sm btn-glass">
+            View All in Directory &rarr;
+          </a>
+        </div>
+
+        <!-- Static Grid of 3 Most Recent Contacts -->
+        <div class="cards-grid" id="favourite-contacts-list">
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Sticky / Bottom Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>&copy; 2026 Digital Contact Book &bull; Dhruvi Paswala</div>
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="pages/contacts.html">Contacts</a>
+        <a href="pages/favourites.html">Favorites</a>
+        <a href="pages/add-contact.html">Add Contact</a>
+        <a href="pages/about.html">About</a>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/home-section.js"></script>
+</body>
+
+</html>

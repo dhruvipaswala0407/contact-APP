@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About & User Guide | Digital Contact Book</title>
+  <meta name="description"
+    content="Learn how to use your digital contact book to replace your physical paper register.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <!-- Ambient Shifting Glow Mesh -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+    <div class="glow-orb glow-3"></div>
+  </div>
+
+  <!-- Pure CSS Mobile Menu Toggle Checkbox -->
+  <input type="checkbox" id="mobile-toggle-check" class="mobile-toggle-check" aria-hidden="true">
+
+  <!-- Sticky Glass Navigation Bar -->
+  <div class="navbar-wrapper">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="../index.html" class="nav-brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 2v4"></path>
+            <path d="M8 2v4"></path>
+            <rect width="18" height="18" x="3" y="4" rx="3"></rect>
+            <circle cx="12" cy="11" r="3"></circle>
+            <path d="M7 18a5 5 0 0 1 10 0"></path>
+          </svg>
+        </div>
+        <span>Digital Contact Book</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../index.html#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="contacts.html" class="nav-link">Contacts</a></li>
+        <li><a href="favourites.html" class="nav-link">Favorites</a></li>
+        <li><a href="add-contact.html" class="nav-link">Add Contact</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+      </ul>
+
+      <label for="mobile-toggle-check" class="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+      </label>
+    </nav>
+  </div>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html" class="nav-link">Home</a>
+    <a href="../index.html#how-it-works" class="nav-link">How It Works</a>
+    <a href="contacts.html" class="nav-link">Contacts</a>
+    <a href="favourites.html" class="nav-link">Favorites</a>
+    <a href="add-contact.html" class="nav-link">Add Contact</a>
+    <a href="about.html" class="nav-link active">About</a>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Header Section -->
+      <div class="hero-section fade-in" style="padding-bottom: 20px;">
+        <div class="hero-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          User Guide & Overview
+        </div>
+        <h1 class="hero-title" style="font-size: clamp(2.2rem, 4vw, 3.2rem);">
+          How to Use Your <br><span class="gradient-text">Digital Contact Book</span>
+        </h1>
+        <p class="hero-subtitle">
+          Designed specifically to upgrade legacy physical contact books into an elegant, fast, and secure digital
+          register.
+        </p>
+      </div>
+
+      <!-- Comparison: Paper Register vs Digital Register -->
+      <section style="margin-bottom: 50px;" class="fade-in">
+        <h2 class="section-title" style="margin-bottom: 16px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-cyan);">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          Why Switch from Paper to Digital?
+        </h2>
+
+        <div class="glass-panel comparison-table-wrap">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Feature</th>
+                <th style="width: 37.5%; color: var(--accent-rose);">Physical Paper Register</th>
+                <th style="width: 37.5%; color: var(--accent-emerald);">Digital Contact Book</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Search Speed</strong></td>
+                <td>Slow; flipping through pages manually</td>
+                <td><span style="color: var(--accent-emerald); font-weight: 600;">Instant</span>; fast browsing &amp;
+                  clean layout</td>
+              </tr>
+              <tr>
+                <td><strong>Calling & Emailing</strong></td>
+                <td>Manual dial from paper notes</td>
+                <td><span style="color: var(--accent-emerald); font-weight: 600;">One-click</span> native click-to-call
+                  &amp; click-to-email</td>
+              </tr>
+              <tr>
+                <td><strong>Form Validation</strong></td>
+                <td>None; duplicate entries and typos often go unnoticed</td>
+                <td><span style="color: var(--accent-emerald); font-weight: 600;">Native HTML5</span> validation for
+                  emails and numbers</td>
+              </tr>
+              <tr>
+                <td><strong>Backup & Durability</strong></td>
+                <td>Fragile; vulnerable to loss, water, or physical wear</td>
+                <td><span style="color: var(--accent-emerald); font-weight: 600;">Safe</span> CSV backup file download
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Editing Records</strong></td>
+                <td>Messy strikethroughs and correction fluid</td>
+                <td><span style="color: var(--accent-emerald); font-weight: 600;">Clean & seamless</span> update at any
+                  moment</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Step-by-Step Guide Grid -->
+      <section id="how-it-works" style="margin-bottom: 50px;" class="fade-in">
+        <h2 class="section-title" style="margin-bottom: 24px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-violet);">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 14 14"></polyline>
+          </svg>
+          How It Works: Quick Start Instructions
+        </h2>
+
+        <div class="guide-grid">
+          <!-- Step 1 -->
+          <div class="glass-panel glass-panel-hover guide-card">
+            <div class="guide-step-num">1</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 8px;">Adding New Contacts
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+              Click on <strong>Add Contact</strong> in the navigation bar. Enter the Company Name, Manager Name, Phone
+              Number, and Email Address. Built-in HTML5 validation ensures correct formatting.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="glass-panel glass-panel-hover guide-card">
+            <div class="guide-step-num">2</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 8px;">Unified Directory</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+              Head to the <strong>Contacts</strong> page. Browse all registered partners with corporate avatars, manager
+              names, and instant contact channels.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glass-panel glass-panel-hover guide-card">
+            <div class="guide-step-num">3</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 8px;">Direct Communication
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+              Each contact card features quick-action links. Click the phone number to launch your system dialer, or
+              click the email address to open your default email client.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="glass-panel glass-panel-hover guide-card">
+            <div class="guide-step-num">4</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 8px;">Aesthetic Glassmorphic
+              UI</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+              Modern, responsive aurora theme designed with pure CSS. Enjoy fluid responsive layouts, soft ambient
+              lighting, and subtle micro-interactions on any screen.
+            </p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="glass-panel glass-panel-hover guide-card">
+            <div class="guide-step-num">5</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 8px;">Editing Records</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+              Need to update a manager's phone or email? Click <strong>Edit</strong> on any contact card to view and
+              revise the company details.
+            </p>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="glass-panel glass-panel-hover guide-card">
+            <div class="guide-step-num">6</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 8px;">Data Backup & CSV</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+              Click the <strong>Export CSV</strong> button on the Contacts page to immediately download your contact
+              register for spreadsheets or offline archives.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Banner -->
+      <section class="glass-panel fade-in"
+        style="padding: 40px; text-align: center; margin-bottom: 40px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(6, 182, 212, 0.12) 100%);">
+        <h2 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700; margin-bottom: 12px;">
+          Ready to Explore Your Register?
+        </h2>
+        <p style="color: var(--text-muted); max-width: 560px; margin: 0 auto 24px; font-size: 1rem;">
+          Your digital register features verified corporate contacts with direct communication links.
+        </p>
+        <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+          <a href="contacts.html" class="btn btn-primary">Open Contacts Directory</a>
+          <a href="add-contact.html" class="btn btn-glass">Add a New Contact</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Sticky / Bottom Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>&copy; 2026 Digital Contact Book &bull; Dhruvi Paswala</div>
+      <div class="footer-nav">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#how-it-works">How It Works</a>
+        <a href="contacts.html">Contacts</a>
+        <a href="favourites.html">Favorites</a>
+        <a href="add-contact.html">Add Contact</a>
+        <a href="about.html" class="active">About</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

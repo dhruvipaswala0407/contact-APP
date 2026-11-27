@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Details | Digital Contact Book</title>
+  <meta name="description" content="Detailed overview and contact information for your business partner.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <!-- Ambient Shifting Glow Mesh -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+    <div class="glow-orb glow-3"></div>
+  </div>
+
+  <!-- Pure CSS Mobile Menu Toggle Checkbox -->
+  <input type="checkbox" id="mobile-toggle-check" class="mobile-toggle-check">
+
+  <!-- Sticky Glass Navigation Bar -->
+  <div class="navbar-wrapper">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="../index.html" class="nav-brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 2v4"></path>
+            <path d="M8 2v4"></path>
+            <rect width="18" height="18" x="3" y="4" rx="3"></rect>
+            <circle cx="12" cy="11" r="3"></circle>
+            <path d="M7 18a5 5 0 0 1 10 0"></path>
+          </svg>
+        </div>
+        <span>Digital Contact Book</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../index.html#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="contacts.html" class="nav-link active">Contacts</a></li>
+        <li><a href="favourites.html" class="nav-link">Favorites</a></li>
+        <li><a href="add-contact.html" class="nav-link">Add Contact</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+
+      <label for="mobile-toggle-check" class="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+      </label>
+    </nav>
+  </div>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html" class="nav-link">Home</a>
+    <a href="../index.html#how-it-works" class="nav-link">How It Works</a>
+    <a href="contacts.html" class="nav-link active">Contacts</a>
+    <a href="favourites.html" class="nav-link">Favorites</a>
+    <a href="add-contact.html" class="nav-link">Add Contact</a>
+    <a href="about.html" class="nav-link">About</a>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <div class="details-container fade-in">
+
+        <!-- 1. Header / Top Bar Area -->
+        <header class="details-top-bar">
+          <div class="details-nav-actions">
+            <a href="contacts.html" class="btn btn-sm btn-glass" title="Back to Contacts Directory">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+              <span>Back to Contacts</span>
+            </a>
+          </div>
+
+          <div class="details-status-badges">
+            <span class="status-badge status-active">
+              <span class="status-dot"></span>
+              Active Contact
+            </span>
+            <span class="record-id-pill" id="record-id-pill"></span>
+          </div>
+        </header>
+
+        <!-- 2. Profile / Primary Identity Hero Block -->
+        <section class="glass-panel details-hero-card">
+          <div class="details-hero-inner">
+            <!-- Large Avatar with Company/Manager Monogram -->
+            <div class="details-avatar-wrapper">
+              <div class="details-avatar-lg" id="details-avatar" style="background: linear-gradient(135deg, hsl(230, 80%, 55%) 0%, hsl(275, 85%, 48%) 100%);">
+              </div>
+              <span class="avatar-verified-badge" title="Verified Corporate Partner">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+            </div>
+
+            <!-- Profile Titles & Badges -->
+            <div class="details-profile-content">
+              <div class="details-name-row" >
+                <h1 class="details-name" id="details-name"></h1>
+                <span id="favTag"></span>
+              </div>
+
+              <div class="details-company-role">
+                <span class="details-bullet" aria-hidden="true">&bull;</span>
+                <span class="details-manger-name" id="details-manger-name"></span>
+              </div>
+
+              <!-- Tags / Category Indicators -->
+              <div class="details-tags-row">
+                <span class="tag-pill tag-purple">Enterprise Client</span>
+                <span class="tag-pill tag-cyan">Cloud Infrastructure</span>
+                <span class="tag-pill tag-emerald">Tier 1 Vendor</span>
+                <span class="tag-pill tag-gray">West Coast Hub</span>
+              </div>
+            </div>
+
+            <!-- Quick Communication Action Buttons in Hero -->
+            <div class="details-hero-quick-actions" id="action-button">
+            
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Complete Contact Information Sections (Grid Layout) -->
+        <div class="details-sections-grid">
+
+          <!-- Section A: Phone Numbers & Direct Lines -->
+          <article class="glass-panel details-section-card">
+            <h2 class="details-card-title">
+              <span class="details-icon-wrap icon-cyan">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </span>
+              <span>Phone Numbers</span>
+            </h2>
+
+            <ul class="details-info-list">
+              <li class="details-info-item">
+                <div class="info-meta" id="phoneNumber">
+                </div>
+                <span class="info-badge">Direct Line</span>
+              </li>
+
+          <!-- Section B: Email Addresses -->
+          <article class="glass-panel details-section-card">
+            <h2 class="details-card-title">
+              <span class="details-icon-wrap icon-purple">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </span>
+              <span>Email Addresses</span>
+            </h2>
+
+            <ul class="details-info-list">
+              <li class="details-info-item">
+                <div class="info-meta" id="emailBox">
+                  
+                </div>
+                <span class="info-badge">Verified</span>
+              </li>
+
+        </div>
+
+        <!-- Section F: Additional Metadata & Custom Audit Fields -->
+        <!-- <article class="glass-panel details-meta-card">
+          <div class="details-meta-grid">
+            <div class="meta-field">
+              <span class="meta-label">Industry Sector</span>
+              <span class="meta-value">Cloud Infrastructure &amp; AI</span>
+            </div>
+
+            <div class="meta-field">
+              <span class="meta-label">Contract Type</span>
+              <span class="meta-value">Multi-Year Enterprise SLA</span>
+            </div>
+
+            <div class="meta-field">
+              <span class="meta-label">Date Added</span>
+              <span class="meta-value">Oct 15, 2026 &bull; 09:30 AM</span>
+            </div>
+
+            <div class="meta-field">
+              <span class="meta-label">Last Activity</span>
+              <span class="meta-value">Nov 20, 2026 &bull; Verified</span>
+            </div>
+          </div>
+        </article> -->
+
+        <!-- 4. Action Buttons Row (Pure HTML/CSS) -->
+        <footer class="details-actions-row">
+          <div class="actions-left">
+            <a href="contacts.html" class="btn btn-glass">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+              <span>Back to Directory</span>
+            </a>
+          </div>
+
+          <div class="actions-right">
+            <a href="favourites.html" class="btn btn-glass" style="border-color: rgba(245, 158, 11, 0.4); color: #fbbf24;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              <span>Favorite</span>
+            </a>
+
+            <a href="edit-contact.html?id=c1" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              </svg>
+              <span>Edit Contact</span>
+            </a>
+          </div>
+        </footer>
+
+      </div>
+      <!-- ================================================================= -->
+      <!-- END CARD FULL DETAILS VIEW                                        -->
+      <!-- ================================================================= -->
+
+    </div>
+  </main>
+
+  <!-- Sticky / Bottom Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>&copy; 2026 Digital Contact Book &bull; Dhruvi Paswala</div>
+      <div class="footer-nav">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#how-it-works">How It Works</a>
+        <a href="contacts.html">Contacts</a>
+        <a href="favourites.html">Favorites</a>
+        <a href="add-contact.html">Add Contact</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+<script src="../js/contact-details.js"></script>
+</body>
+
+</html>

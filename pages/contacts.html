@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts Directory | Digital Contact Book</title>
+  <meta name="description" content="View, search, filter and manage company contacts in your digital register.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <!-- Ambient Shifting Glow Mesh -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+    <div class="glow-orb glow-3"></div>
+  </div>
+
+  <!-- Pure CSS Mobile Menu Toggle Checkbox -->
+  <input type="checkbox" id="mobile-toggle-check" class="mobile-toggle-check">
+
+  <!-- Sticky Glass Navigation Bar -->
+  <div class="navbar-wrapper">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="../index.html" class="nav-brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 2v4"></path>
+            <path d="M8 2v4"></path>
+            <rect width="18" height="18" x="3" y="4" rx="3"></rect>
+            <circle cx="12" cy="11" r="3"></circle>
+            <path d="M7 18a5 5 0 0 1 10 0"></path>
+          </svg>
+        </div>
+        <span>Digital Contact Book</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../index.html#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="contacts.html" class="nav-link active">Contacts</a></li>
+        <li><a href="favourites.html" class="nav-link">Favorites</a></li>
+        <li><a href="add-contact.html" class="nav-link">Add Contact</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+
+      <label for="mobile-toggle-check" class="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+      </label>
+    </nav>
+  </div>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html" class="nav-link">Home</a>
+    <a href="../index.html#how-it-works" class="nav-link">How It Works</a>
+    <a href="contacts.html" class="nav-link active">Contacts</a>
+    <a href="favourites.html" class="nav-link">Favorites</a>
+    <a href="add-contact.html" class="nav-link">Add Contact</a>
+    <a href="about.html" class="nav-link">About</a>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Page Header -->
+      <div class="section-header fade-in">
+        <div>
+          <h1 class="section-title">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-violet);">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            Business Contacts Directory
+            <span class="section-badge" id="contacts-badge"></span>
+          </h1>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 4px;">
+            Search, view and manage all your corporate records in one unified place.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+          <a href="favourites.html" class="btn btn-sm btn-glass"
+            style="border-color: rgba(245, 158, 11, 0.4); color: #fbbf24;" title="View Favorite Contacts">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            Favorites
+          </a>
+          <a href="add-contact.html" class="btn btn-sm btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Add Contact
+          </a>
+        </div>
+      </div>
+
+      <!-- Search & Sort Controls Toolbar -->
+      <div class="glass-panel toolbar fade-in">
+        <!-- Search Field -->
+        <div class="search-wrap">
+          <svg class="search-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" class="search-field" id="search-input"
+            placeholder="Search by company, manager, phone, or email..." autocomplete="off">
+        </div>
+
+        <!-- Sort Select Dropdown -->
+        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+          <label for="sort-select" style="font-size: 0.88rem; color: var(--text-muted); font-weight: 500;">Sort
+            By:</label>
+          <select id="sort-select" class="sort-select" aria-label="Sort Contacts">
+            <option value="company-az">Company (A &rarr; Z)</option>
+            <option value="company-za">Company (Z &rarr; A)</option>
+            <option value="manager-az">Manager (A &rarr; Z)</option>
+            <option value="manager-za">Manager (Z &rarr; A)</option>
+            <option value="newest">Recently Added</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Contacts Grid Container -->
+      <div class="cards-grid fade-in" id="contacts-container">
+        <!-- contact-card save  -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Delete Confirmation Modal Dialog (Pure CSS :target) -->
+  <div class="modal-overlay" id="delete-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <a href="#" class="modal-backdrop-close" aria-label="Close modal"></a>
+    <div class="modal-card">
+      <div class="modal-icon-badge">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 6h18"></path>
+          <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+          <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+          <line x1="10" y1="11" x2="10" y2="17"></line>
+          <line x1="14" y1="11" x2="14" y2="17"></line>
+        </svg>
+      </div>
+      <h3 id="modal-title" style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 8px;">Delete
+        Contact?</h3>
+      <p id="modal-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px; line-height: 1.5;">
+        Are you sure you want to delete this contact from your contact book? This action cannot be undone.
+      </p>
+
+      <!-- Target Contact Preview (Company Name & User Name) -->
+      <div class="modal-contact-preview"
+        style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 12px 16px; margin-bottom: 22px; text-align: center;">
+        <div id="modal-company-name"
+          style="font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; color: var(--text-main); margin-bottom: 4px;">
+          Company Name</div>
+        <div
+          style="font-size: 0.88rem; color: var(--text-muted); display: flex; align-items: center; justify-content: center; gap: 6px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span id="modal-user-name">User Name</span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px; justify-content: center;">
+        <a href="#" class="btn btn-glass" id="modal-cancel-btn" style="flex: 1;">Cancel</a>
+        <a href="contacts.html" class="btn btn-danger" id="modal-confirm-btn" style="flex: 1;">Delete</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky / Bottom Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>&copy; 2026 Digital Contact Book &bull; Dhruvi Paswala</div>
+      <div class="footer-nav">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#how-it-works">How It Works</a>
+        <a href="contacts.html">Contacts</a>
+        <a href="favourites.html">Favorites</a>
+        <a href="add-contact.html">Add Contact</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/contacts-cards.js"></script>
+</body>
+
+</html>
