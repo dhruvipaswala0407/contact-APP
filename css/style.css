@@ -1306,16 +1306,18 @@ a {
   animation: fadeInUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+
 /* --- Responsive Media Queries --- */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .nav-links {
     display: none;
   }
 
-  .mobile-toggle {
+    .mobile-toggle {
     display: flex;
   }
-
+}
+@media (max-width: 768px) {
   .navbar {
     height: 60px;
     padding: 0 16px;
@@ -1354,8 +1356,10 @@ a {
   .footer-inner {
     flex-direction: column;
     text-align: center;
+    display: flex;
   }
 }
+
 .errorMassage {
   border-color: #f43f5e;
 }
